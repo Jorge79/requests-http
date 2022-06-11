@@ -7,12 +7,7 @@
       <button type="button" class="btn btn-primary" [routerLink]="['novo']">
         Novo Curso
       </button>
-      <button
-        type="button"
-        class="btn btn-secondary"
-        [routerLink]="['novo']"
-        (click)="onRefresh()"
-      >
+      <button type="button" class="btn btn-secondary" (click)="onRefresh()">
         Atualizar
       </button>
     </div>
@@ -35,26 +30,26 @@
           <td>{{ curso.nome }}</td>
           <td>
             <span class="float-end">
-              <button button type="button" class="btn btn-warning mb-1 btn-sm">
-                Atualizar
-              </button>
+              <button class="btn btn-warning mb-1 btn-sm">Atualizar</button>
 
-              <button type="button" class="btn btn-danger mb-1 btn-sm">
-                Remover
-              </button>
+              <button class="btn btn-danger mb-1 btn-sm">Remover</button>
             </span>
           </td>
         </tr>
       </tbody>
     </table>
-    <!-- <ng-template #loadingError>
-      <div *ngIf="error$ | async; else loading">
-        <p>Erro ao carregar cursos, tente novamente mais tarde</p>
-      </div>
-    </ng-template> -->
 
     <ng-template #loading>
       <span>Carregando Cursos...</span>
     </ng-template>
+
+    <!--ng-template #loadingError>
+      <div *ngIf="error$ | async; else loading" >
+        Erro ao carregar cursos. Tente novamente mais tarde.
+      </div>
+      <ng-template #loading>
+          <span>Carregando Cursos...</span>
+      </ng-template>
+    </ng-template -->
   </div>
 </div>

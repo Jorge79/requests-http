@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CursosService } from '../cursos.service';
 import { Curso } from '../curso';
 import { catchError, empty, Observable, Subject } from 'rxjs';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { AlertModalComponent } from 'src/app/shared/alert-modal/alert-modal.component';
 import { AlertModalService } from 'src/app/shared/alert-modal/alert-modal.service';
 
 @Component({
@@ -25,6 +23,7 @@ export class CursosListaComponent implements OnInit {
 
   ngOnInit() {
     // this.service.list().subscribe((dados) => (this.cursos = dados));
+    this.onRefresh();
   }
 
   onRefresh() {
